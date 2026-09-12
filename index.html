@@ -1,9 +1,801 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Developer Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amanpreet Singh (AmanX) | AI Systems & Full-Stack GenAI Engineer</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Amanpreet Singh (AmanX) | AI Systems & Full-Stack GenAI Engineer">
+  <meta name="description" content="Portfolio of Amanpreet Singh — AI Systems Engineer specializing in Enterprise Multi-Agent RAG with Hallucination Guardrails, 100% On-Device Voice Pipelines (Whisper + llama.cpp + ONNX), and Production GenAI Systems.">
+  <meta name="keywords" content="Amanpreet Singh, AmanX, AmxnCode, AI Engineer, LLM Engineer, RAG, Faster-Whisper, llama.cpp, Generative AI, Python, FastAPI, Next.js, Machine Learning">
+  <meta name="author" content="Amanpreet Singh">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amxncode.github.io/">
+  <meta property="og:title" content="Amanpreet Singh (AmanX) | AI Systems & Full-Stack GenAI Engineer">
+  <meta property="og:description" content="AI Systems Engineer specializing in Enterprise RAG with Hallucination Guardrails, On-Device Voice Pipelines, and Production GenAI Systems.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/61104514?v=4">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://amxncode.github.io/">
+  <meta property="twitter:title" content="Amanpreet Singh (AmanX) | AI Systems Engineer">
+  <meta property="twitter:description" content="AI Systems Engineer specializing in Enterprise RAG with Hallucination Guardrails and On-Device Voice Pipelines.">
+  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/61104514?v=4">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Developer Website</h1>
+  <!-- Ambient Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow ambient-top-left"></div>
+  <div class="ambient-glow ambient-mid-right"></div>
+  <div class="ambient-glow ambient-bottom-left"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="navbar">
+    <div class="nav-wrapper">
+      <a href="#" class="brand">
+        <span>Amanpreet Singh</span>
+        <span class="brand-badge">AmanX</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link active">Overview</a></li>
+        <li><a href="#recruiter-deck" class="nav-link">Recruiter Deck</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#ai-assistant" class="nav-link">AI Assistant</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#recruiter-deck" class="recruiter-pill-btn">
+          <i data-lucide="zap" style="width:16px; height:16px;"></i>
+          <span>Recruiter Mode</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Open to Full-Time Roles & High-Impact Engineering</span>
+        </div>
+
+        <h1 class="hero-title">
+          Architecting Production <span class="gradient-text">AI Systems</span> & Real-Time Edge Intelligence.
+        </h1>
+
+        <div class="hero-subtitle-box">
+          <span>Focusing on:</span>
+          <span id="typing-text" class="gradient-text">AI Systems Engineer</span>
+          <span class="typing-cursor">|</span>
+        </div>
+
+        <p class="hero-lead">
+          Hi, I'm <strong>Amanpreet Singh (AmanX)</strong>. I design and build production-grade <strong>Generative AI architectures</strong>, 
+          <strong>enterprise RAG systems with automated hallucination evaluation</strong>, and <strong>100% on-device local voice pipelines</strong> 
+          combining Whisper, quantized LLMs (<code style="color:var(--accent-cyan); font-family:var(--font-mono)">llama.cpp</code>), and ONNX speech synthesis.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#recruiter-deck" class="btn btn-primary">
+            <i data-lucide="sparkles"></i> Recruiter Fast-Track (30s)
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <i data-lucide="code-2"></i> Explore Featured Work
+          </a>
+          <a href="https://github.com/AmxnCode" target="_blank" class="btn btn-ghost">
+            <i data-lucide="github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/amanpreet-singh-332482345/" target="_blank" class="btn btn-ghost">
+            <i data-lucide="linkedin"></i> LinkedIn
+          </a>
+        </div>
+
+        <div class="hero-stats-bar">
+          <div class="stat-item">
+            <span class="stat-value">40+</span>
+            <span class="stat-label">Public Repos & AI Tools</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">&lt; 1.0s</span>
+            <span class="stat-label">Local Voice Pipeline Latency</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">4-Vector</span>
+            <span class="stat-label">Automated RAG Hallucination Scoring</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">On-Device Edge Privacy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruiter Fast-Track Snapshot Section -->
+  <section class="recruiter-deck-section" id="recruiter-deck">
+    <div class="container">
+      <div class="recruiter-card">
+        <div class="recruiter-card-header">
+          <div>
+            <span class="recruiter-badge">
+              <i data-lucide="briefcase" style="width:14px; height:14px;"></i> HR & Hiring Manager Quick-Deck
+            </span>
+            <h2 class="recruiter-title">Candidate Snapshot & Core Superpowers</h2>
+          </div>
+          <div class="recruiter-actions">
+            <button class="btn btn-secondary" data-copy="allinone3066@gmail.com">
+              <i data-lucide="copy"></i> Copy Email
+            </button>
+            <a href="https://www.linkedin.com/in/amanpreet-singh-332482345/" target="_blank" class="btn btn-secondary">
+              <i data-lucide="linkedin"></i> LinkedIn
+            </a>
+            <a href="#contact" class="btn btn-primary">
+              <i data-lucide="mail"></i> Hire Amanpreet
+            </a>
+          </div>
+        </div>
+
+        <div class="recruiter-grid">
+          <div class="recruiter-point">
+            <div class="recruiter-icon-wrap">
+              <i data-lucide="cpu"></i>
+            </div>
+            <h4>Production AI & RAG Specialist</h4>
+            <p>
+              Experience implementing multi-agent RAG pipelines with <strong>LLM-as-a-judge automated guardrails</strong>, 
+              preventing hallucinations and measuring groundedness before data reaches executive users.
+            </p>
+          </div>
+
+          <div class="recruiter-point">
+            <div class="recruiter-icon-wrap">
+              <i data-lucide="mic"></i>
+            </div>
+            <h4>Edge & Local Voice AI Pioneer</h4>
+            <p>
+              Engineered end-to-end local speech-to-speech pipelines for Python and Android. Combines Faster-Whisper, 
+              quantized LFM (350M Q4_0), and ONNX Supertonic TTS for zero-cloud latency and complete privacy.
+            </p>
+          </div>
+
+          <div class="recruiter-point">
+            <div class="recruiter-icon-wrap">
+              <i data-lucide="layers"></i>
+            </div>
+            <h4>Full-Stack & Systems Craft</h4>
+            <p>
+              Strong proficiency across Python, FastAPI, Docker, TypeScript, Next.js, and Android Kotlin/JNI. 
+              Rapidly converts cutting-edge AI papers into tested, deployable software.
+            </p>
+          </div>
+
+          <div class="recruiter-point">
+            <div class="recruiter-icon-wrap">
+              <i data-lucide="check-circle"></i>
+            </div>
+            <h4>Work Preferences & Availability</h4>
+            <p>
+              <strong>Status:</strong> Immediate availability for Full-Time roles & High-Impact Contracts.<br>
+              <strong>Location:</strong> Open to Remote Worldwide, or Hybrid / Relocation.<br>
+              <strong>Roles:</strong> AI Systems Engineer, GenAI Developer, ML Engineer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="terminal" style="width:14px; height:14px;"></i> Production Engineering
+        </span>
+        <h2 class="section-title">Featured Systems & Products</h2>
+        <p class="section-desc">
+          Real-world implementations solving hard engineering problems: from enterprise LLM hallucination prevention 
+          to zero-latency on-device voice agents.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: RAIP (Featured Flagship) -->
+        <article class="project-card featured">
+          <div>
+            <div class="project-badge-bar">
+              <span class="project-tag">Enterprise Applied AI Platform</span>
+              <span class="project-stars"><i data-lucide="git-branch" style="width:14px; height:14px;"></i> Production Tested</span>
+            </div>
+
+            <h3 class="project-title">RAIP — Re'equil AI Intelligence Platform</h3>
+            <p class="project-desc">
+              An internal enterprise intelligence platform concept for D2C brands: ingests live market and competitor telemetry, 
+              indexes data for vector retrieval, and allows departments (R&amp;D, Sales, Marketing) to query domain knowledge. 
+              Crucially, <strong>every response is scored in real-time by an automated LLM-as-a-judge</strong> for groundedness 
+              and hallucination risk before being displayed.
+            </p>
+
+            <div class="project-architecture-preview">
+              <div class="arch-header">
+                <i data-lucide="network" style="width:14px; height:14px;"></i> Verified Pipeline Architecture
+              </div>
+              <div class="arch-steps">
+                <div class="arch-step">
+                  <span>1. Live Scrapers (Playwright + Google News RSS)</span>
+                  <span class="arch-arrow">→</span>
+                  <span>2. Vector Indexing</span>
+                </div>
+                <div class="arch-step">
+                  <span>3. Multi-Model OpenRouter Fallback</span>
+                  <span class="arch-arrow">→</span>
+                  <span style="color:var(--accent-cyan); font-weight:bold;">4. Hallucination Judge (Score &gt; 0.8)</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="tech-stack-list">
+              <li class="tech-chip">Python</li>
+              <li class="tech-chip">FastAPI</li>
+              <li class="tech-chip">Vector Store / RAG</li>
+              <li class="tech-chip">Playwright Scraper</li>
+              <li class="tech-chip">LLM-as-a-Judge</li>
+              <li class="tech-chip">Docker</li>
+              <li class="tech-chip">OpenRouter Chains</li>
+            </ul>
+
+            <div class="project-links">
+              <button class="project-btn primary" data-open-modal="raip">
+                <i data-lucide="layers"></i> System Architecture Deep Dive
+              </button>
+              <a href="https://github.com/AmxnCode/raip-ai-intelligence-platform" target="_blank" class="project-btn">
+                <i data-lucide="github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <div class="featured-visual">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; padding-bottom:12px; border-bottom:1px solid var(--border-subtle);">
+              <span class="pulse-badge" style="background: rgba(56, 189, 248, 0.12); color: var(--accent-cyan); font-weight:600;">
+                <i data-lucide="shield-check" style="width:14px; height:14px;"></i> Enterprise Capability Matrix
+              </span>
+              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">RAIP Production Suite</span>
+            </div>
+            <div class="feature-telemetry-list">
+              <div class="telemetry-card">
+                <div class="telemetry-header">
+                  <span class="telemetry-label">Automated LLM Guardrails</span>
+                  <span class="telemetry-stat" style="color: var(--accent-emerald);">Active (0.82 Score Threshold)</span>
+                </div>
+                <p class="telemetry-desc">Real-time LLM-as-a-judge scores groundedness, hallucination risk, confidence, and citation integrity before results are shown to users.</p>
+              </div>
+
+              <div class="telemetry-card">
+                <div class="telemetry-header">
+                  <span class="telemetry-label">Real-Time Autonomous Ingestion</span>
+                  <span class="telemetry-stat" style="color: var(--accent-cyan);">Live Telemetry</span>
+                </div>
+                <p class="telemetry-desc">Automated Playwright browser scrapers extract competitor pricing, customer sentiment, and Google News RSS feeds continuously.</p>
+              </div>
+
+              <div class="telemetry-card">
+                <div class="telemetry-header">
+                  <span class="telemetry-label">5 Department Decision Portals</span>
+                  <span class="telemetry-stat" style="color: var(--accent-indigo);">Live Dashboards</span>
+                </div>
+                <p class="telemetry-desc">Custom interactive analytics and RAG conversational agents for R&amp;D, Sales, Marketing, Executive, and Social Listening teams.</p>
+              </div>
+
+              <div class="telemetry-card">
+                <div class="telemetry-header">
+                  <span class="telemetry-label">Resilient Multi-Model Routing</span>
+                  <span class="telemetry-stat" style="color: var(--accent-violet);">Zero Downtime</span>
+                </div>
+                <p class="telemetry-desc">Intelligent fallback cascades across open models prevent single-provider rate limits or outage disruption.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Edge Voice Pipeline -->
+        <article class="project-card">
+          <div>
+            <div class="project-badge-bar">
+              <span class="project-tag">On-Device Edge AI</span>
+              <span class="project-stars"><i data-lucide="zap" style="width:14px; height:14px;"></i> Sub-second</span>
+            </div>
+
+            <h3 class="project-title">Edge Voice Pipeline (Python &amp; Android SDK)</h3>
+            <p class="project-desc">
+              A 100% local, on-device streaming voice pipeline combining <strong>Faster-Whisper ASR</strong>, 
+              quantized <strong>LFM 2.5-350M (llama.cpp)</strong>, and <strong>Supertonic 3 ONNX TTS</strong>. 
+              Operates completely offline with sub-second response times, zero cloud API fees, and absolute user privacy.
+            </p>
+
+            <div class="project-architecture-preview">
+              <div class="arch-header">
+                <i data-lucide="cpu" style="width:14px; height:14px;"></i> Local Architecture Stack
+              </div>
+              <div class="arch-steps">
+                <div class="arch-step">
+                  <span>Mic → Faster-Whisper (Q4)</span>
+                  <span class="arch-arrow">→</span>
+                  <span>LFM-350M (llama.cpp)</span>
+                  <span class="arch-arrow">→</span>
+                  <span>Supertonic TTS</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="tech-stack-list">
+              <li class="tech-chip">Python</li>
+              <li class="tech-chip">Android Kotlin / JNI</li>
+              <li class="tech-chip">llama.cpp</li>
+              <li class="tech-chip">faster-whisper</li>
+              <li class="tech-chip">ONNX Runtime</li>
+              <li class="tech-chip">CTranslate2</li>
+            </ul>
+          </div>
+
+          <div class="project-links">
+            <button class="project-btn primary" data-open-modal="voice">
+              <i data-lucide="layers"></i> Architecture
+            </button>
+            <a href="https://github.com/AmxnCode/voice-pipeline-py" target="_blank" class="project-btn">
+              <i data-lucide="github"></i> Python SDK
+            </a>
+            <a href="https://github.com/AmxnCode/voice-pipeline-sdk" target="_blank" class="project-btn">
+              <i data-lucide="smartphone"></i> Android SDK
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Text-to-Videos Generative App -->
+        <article class="project-card">
+          <div>
+            <div class="project-badge-bar">
+              <span class="project-tag">Generative Media AI</span>
+              <span class="project-stars"><i data-lucide="video" style="width:14px; height:14px;"></i> Full-Stack</span>
+            </div>
+
+            <h3 class="project-title">Text-to-Videos AI Studio</h3>
+            <p class="project-desc">
+              A full-stack Next.js web application that takes concise prompt inputs and autonomously orchestrates 
+              script generation, scene breakdowns, voiceover audio synthesis, and visual rendering to output 
+              ready-to-publish 30s+ videos.
+            </p>
+
+            <div class="project-architecture-preview">
+              <div class="arch-header">
+                <i data-lucide="play" style="width:14px; height:14px;"></i> Video Synthesis Flow
+              </div>
+              <div class="arch-steps">
+                <div class="arch-step">
+                  <span>Prompt → LLM Scene Director → Audio Synthesis → Canvas Video Compositor</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="tech-stack-list">
+              <li class="tech-chip">TypeScript</li>
+              <li class="tech-chip">Next.js</li>
+              <li class="tech-chip">React</li>
+              <li class="tech-chip">Audio Synthesis</li>
+              <li class="tech-chip">Tailwind CSS</li>
+            </ul>
+          </div>
+
+          <div class="project-links">
+            <button class="project-btn primary" data-open-modal="video">
+              <i data-lucide="layers"></i> Architecture
+            </button>
+            <a href="https://github.com/AmxnCode/text-to-videos" target="_blank" class="project-btn">
+              <i data-lucide="github"></i> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: All-AI Productivity App -->
+        <article class="project-card">
+          <div>
+            <div class="project-badge-bar">
+              <span class="project-tag">AI Productivity Suite</span>
+              <span class="project-stars"><i data-lucide="layout" style="width:14px; height:14px;"></i> Multimodal</span>
+            </div>
+
+            <h3 class="project-title">All-AI Productivity Suite</h3>
+            <p class="project-desc">
+              AI-driven desktop workspace tool featuring intelligent screenshot classification, voice memo transcription, 
+              focus Pomodoro timers, and productivity analytics. Engineered to streamline deep-work developer workflows.
+            </p>
+
+            <div class="project-architecture-preview">
+              <div class="arch-header">
+                <i data-lucide="check" style="width:14px; height:14px;"></i> Core Capabilities
+              </div>
+              <div class="arch-steps">
+                <div class="arch-step">
+                  <span>Voice Memos + Vision OCR + Pomodoro State Machine + Live Analytics</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="tech-stack-list">
+              <li class="tech-chip">TypeScript</li>
+              <li class="tech-chip">React</li>
+              <li class="tech-chip">Vision Models</li>
+              <li class="tech-chip">Whisper Transcription</li>
+              <li class="tech-chip">Analytics Engine</li>
+            </ul>
+          </div>
+
+          <div class="project-links">
+            <button class="project-btn primary" data-open-modal="all-ai">
+              <i data-lucide="layers"></i> Architecture
+            </button>
+            <a href="https://github.com/AmxnCode/all-ai-tool" target="_blank" class="project-btn">
+              <i data-lucide="github"></i> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5: Open Source LLM & Fine-Tuning Labs -->
+        <article class="project-card">
+          <div>
+            <div class="project-badge-bar">
+              <span class="project-tag">Research &amp; Open Source</span>
+              <span class="project-stars"><i data-lucide="flask-conical" style="width:14px; height:14px;"></i> Foundation Models</span>
+            </div>
+
+            <h3 class="project-title">Alpaca Dataset Generator &amp; LLM Tuning</h3>
+            <p class="project-desc">
+              Custom pipelines for synthetic instruction tuning dataset generation (`Alpaca-style-Dataset-Generator`) 
+              and fine-tuning workflows (`LLaMA-Factory`). Active open-source contributor experimenting with DeepSeek-R1 
+              reproductions and neural steering architectures.
+            </p>
+
+            <div class="project-architecture-preview">
+              <div class="arch-header">
+                <i data-lucide="database" style="width:14px; height:14px;"></i> Data &amp; Training Pipeline
+              </div>
+              <div class="arch-steps">
+                <div class="arch-step">
+                  <span>Seed Tasks → Quality Filtering → Deduplication → LLaMA-Factory LoRA / QLoRA</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="tech-stack-list">
+              <li class="tech-chip">Python</li>
+              <li class="tech-chip">PyTorch</li>
+              <li class="tech-chip">LLaMA-Factory</li>
+              <li class="tech-chip">Synthetic Data</li>
+              <li class="tech-chip">HuggingFace</li>
+            </ul>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/AmxnCode/Alpaca-style-Dataset-Generator" target="_blank" class="project-btn primary">
+              <i data-lucide="github"></i> Dataset Generator
+            </a>
+            <a href="https://github.com/AmxnCode" target="_blank" class="project-btn">
+              <i data-lucide="external-link"></i> All Repositories
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive "Ask Aman AI" Recruiter Terminal -->
+  <section class="terminal-section" id="ai-assistant">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="message-square" style="width:14px; height:14px;"></i> Interactive Recruiter Bot
+        </span>
+        <h2 class="section-title">Ask Aman's AI Assistant</h2>
+        <p class="section-desc">
+          Have questions about my technical background, architecture decisions, or role fit? 
+          Ask directly or click any pre-configured question below!
+        </p>
+      </div>
+
+      <div class="ai-assistant-container">
+        <div class="ai-assistant-header">
+          <div class="ai-assistant-title">
+            <i data-lucide="bot" style="color:var(--accent-cyan)"></i>
+            <span>AmanX Interactive Candidate Bot</span>
+            <span class="pulse-badge">● Online</span>
+          </div>
+          <span style="font-size:0.8rem; color:var(--text-muted); font-family:var(--font-mono)">Model: Local Knowledgebase</span>
+        </div>
+
+        <div class="ai-chat-window" id="ai-chat-window">
+          <div class="chat-bubble bot">
+            Hello! I am Aman's interactive assistant. I can help answer technical inquiries from recruiters, engineering leads, and hiring managers. 
+            Feel free to ask a question or select from the options below!
+          </div>
+        </div>
+
+        <div class="quick-prompts-bar">
+          <button class="quick-prompt-btn" data-prompt="why-hire">
+            <i data-lucide="sparkles"></i> Why hire Amanpreet?
+          </button>
+          <button class="quick-prompt-btn" data-prompt="voice-ai">
+            <i data-lucide="mic"></i> Tell me about the Edge Voice Pipeline
+          </button>
+          <button class="quick-prompt-btn" data-prompt="rag-eval">
+            <i data-lucide="shield-check"></i> How does your RAG hallucination evaluation work?
+          </button>
+          <button class="quick-prompt-btn" data-prompt="tech-stack">
+            <i data-lucide="code"></i> What is his primary tech stack?
+          </button>
+          <button class="quick-prompt-btn" data-prompt="availability">
+            <i data-lucide="calendar"></i> Work setup &amp; availability
+          </button>
+        </div>
+
+        <div style="padding: 16px 24px; background: rgba(15, 20, 36, 0.9); border-top: 1px solid var(--border-subtle); display:flex; gap:12px;">
+          <input type="text" id="chat-input" placeholder="Type a question for Aman (e.g. Do you know FastAPI, Docker, llama.cpp?)..." 
+                 style="flex:1; background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding:10px 16px; color:#fff; font-size:0.9rem; outline:none;">
+          <button id="chat-send-btn" class="btn btn-primary" style="padding:10px 20px; font-size:0.9rem;">
+            <i data-lucide="send"></i> Ask
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Matrix Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="layers" style="width:14px; height:14px;"></i> Core Competencies
+        </span>
+        <h2 class="section-title">Skills &amp; Engineering Disciplines</h2>
+        <p class="section-desc">
+          Proficiencies honed across production AI platforms, real-time edge pipelines, and full-stack software development.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-icon icon-cyan">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <h3 class="skill-card-title">LLM Systems &amp; RAG</h3>
+          <p class="skill-card-desc">
+            Designing reliable agentic systems and multi-hop retrieval pipelines with strict hallucination guardrails.
+          </p>
+          <div class="skill-items">
+            <span class="skill-pill">Multi-Agent RAG</span>
+            <span class="skill-pill">LLM-as-a-Judge</span>
+            <span class="skill-pill">Vector DBs (Pinecone/Chroma)</span>
+            <span class="skill-pill">Dense Embeddings</span>
+            <span class="skill-pill">Fine-Tuning (LoRA)</span>
+            <span class="skill-pill">LLaMA-Factory</span>
+            <span class="skill-pill">Prompt Engineering</span>
+            <span class="skill-pill">OpenRouter Fallback</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon icon-purple">
+            <i data-lucide="mic-2"></i>
+          </div>
+          <h3 class="skill-card-title">Edge AI &amp; Audio Pipelines</h3>
+          <p class="skill-card-desc">
+            Deploying quantized models directly on local consumer hardware for sub-second, zero-cloud performance.
+          </p>
+          <div class="skill-items">
+            <span class="skill-pill">faster-whisper</span>
+            <span class="skill-pill">llama.cpp</span>
+            <span class="skill-pill">ONNX Runtime</span>
+            <span class="skill-pill">Supertonic TTS</span>
+            <span class="skill-pill">4-bit Quantization (Q4_0)</span>
+            <span class="skill-pill">CTranslate2</span>
+            <span class="skill-pill">Android NDK / JNI</span>
+            <span class="skill-pill">Streaming Audio</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon icon-emerald">
+            <i data-lucide="server"></i>
+          </div>
+          <h3 class="skill-card-title">Backend &amp; Scalable Systems</h3>
+          <p class="skill-card-desc">
+            Robust microservices, async APIs, automated browser scraping, and resilient containerization.
+          </p>
+          <div class="skill-items">
+            <span class="skill-pill">Python (AsyncIO)</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">Docker &amp; Compose</span>
+            <span class="skill-pill">Playwright Headless</span>
+            <span class="skill-pill">RESTful APIs</span>
+            <span class="skill-pill">WebSockets</span>
+            <span class="skill-pill">Git / GitHub Actions</span>
+            <span class="skill-pill">Linux / macOS CLI</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon icon-amber">
+            <i data-lucide="layout"></i>
+          </div>
+          <h3 class="skill-card-title">Modern Frontend &amp; Mobile</h3>
+          <p class="skill-card-desc">
+            Responsive, accessible user interfaces with clean architecture and reactive state management.
+          </p>
+          <div class="skill-items">
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">Next.js (App Router)</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Tailwind CSS</span>
+            <span class="skill-pill">Android (Kotlin)</span>
+            <span class="skill-pill">State Management</span>
+            <span class="skill-pill">Interactive Dashboards</span>
+            <span class="skill-pill">Responsive Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Engineering Journey -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="clock" style="width:14px; height:14px;"></i> Trajectory
+        </span>
+        <h2 class="section-title">Engineering Journey &amp; Milestones</h2>
+        <p class="section-desc">
+          Continuous building, open-source experimentation, and practical system development.
+        </p>
+      </div>
+
+      <div class="experience-timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 – PRESENT</span>
+            <h3 class="timeline-role">Independent AI Systems &amp; Open-Source Engineer</h3>
+            <div class="timeline-company">Personal Lab / GitHub (@AmxnCode)</div>
+            <p class="timeline-desc">
+              • Engineered <strong>RAIP</strong>: An enterprise RAG intelligence platform with real-time Playwright scrapers and automated LLM-as-a-judge hallucination evaluation.<br>
+              • Created the <strong>Voice Pipeline SDK</strong> (Python &amp; Android): End-to-end on-device local voice assistants using Faster-Whisper, LFM-350M, and Supertonic 3.<br>
+              • Built generative media tools including <strong>Text-to-Videos</strong> and multimodal workspace utilities.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2020 – 2024</span>
+            <h3 class="timeline-role">Full-Stack Developer &amp; Applied ML Researcher</h3>
+            <div class="timeline-company">Web &amp; AI Engineering</div>
+            <p class="timeline-desc">
+              • Developed full-stack web applications using React, Next.js, and Python backend microservices.<br>
+              • Explored neural network architectures, custom dataset synthesis, and automated fine-tuning workflows.<br>
+              • Authored 40+ repositories spanning developer tooling, automation bots, and model inference optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Let's Connect Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-container">
+        <span class="section-tag" style="margin-bottom:20px;">
+          <i data-lucide="handshake" style="width:14px; height:14px;"></i> Available Immediately
+        </span>
+        <h2 class="contact-highlight">Let's Build Something Extraordinary</h2>
+        <p class="contact-lead">
+          I am actively looking for high-impact AI Engineering, Full-Stack GenAI, and Machine Learning roles. 
+          Whether you have an immediate hiring need or want to discuss an innovative architecture, I'd love to connect.
+        </p>
+
+        <div class="contact-box">
+          <button class="email-copy-pill" data-copy="allinone3066@gmail.com" title="Click to copy email address">
+            <i data-lucide="copy" style="color:var(--accent-cyan)"></i>
+            <span>allinone3066@gmail.com</span>
+          </button>
+          
+          <a href="mailto:allinone3066@gmail.com?subject=Interview%20Inquiry%20-%20AI%20Engineering%20Role" class="btn btn-primary">
+            <i data-lucide="send"></i> Send Email Direct
+          </a>
+        </div>
+
+        <ul class="social-links">
+          <li>
+            <a href="https://github.com/AmxnCode" target="_blank" class="social-link-btn">
+              <i data-lucide="github"></i> GitHub (@AmxnCode)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/amanpreet-singh-332482345/" target="_blank" class="social-link-btn">
+              <i data-lucide="linkedin"></i> LinkedIn Profile
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" class="social-link-btn">
+              <i data-lucide="twitter"></i> Twitter / X
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div>
+        © 2026 <strong>Amanpreet Singh</strong> (AmanX / AmxnCode). Built for production performance.
+      </div>
+      <div>
+        <a href="#about" style="color:var(--text-secondary); text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+          Back to Top <i data-lucide="arrow-up" style="width:14px; height:14px;"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- System Architecture Deep-Dive Modal -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-body" id="modal-content-area">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i data-lucide="check-circle-2"></i> Copied to clipboard!
+  </div>
+
+  <!-- Lucide Icon Initialization -->
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
 </body>
 </html>
